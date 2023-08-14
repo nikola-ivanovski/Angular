@@ -1,0 +1,14 @@
+<app-filter-options (filterChanged)="applyFilter($event)"></app-filter-options>
+<div class="cards">
+  <div class="car-card" *ngFor="let car of filteredCars">
+    <img [src]="car.image" [alt]="car.model" />
+    <h2>{{ car.model }}</h2>
+    <p>Engine: {{ car.engineType }}</p>
+    <p>Year: {{ car.yearOfProduction }}</p>
+    <p>Price: {{ car.priceToRent | currency }}</p>
+    <p *ngIf="!car.isRented" class="available">Available</p>
+    <button (click)="toggleRent(car)">
+      {{ car.isRented ? "Return" : "Rent" }}
+    </button>
+  </div>
+</div>
