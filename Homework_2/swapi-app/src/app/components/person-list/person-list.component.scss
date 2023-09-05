@@ -1,0 +1,17 @@
+.container {
+  .row {
+    .col {
+      .list-type {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        li {
+          border: 1px solid black;
+          list-style-type: none;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
